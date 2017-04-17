@@ -1,0 +1,26 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "jsRules": {},
+  "rules": {
+    "max-line-length": false,
+    "interface-name": [true, "never-prefix"],
+    "import-spacing": false,
+    "ban-types": false,
+    "curly": false,
+    "quotemark": {
+      "options": [
+        "single",
+        "avoid-escape"
+      ]
+    },
+    "typedef-whitespace": {
+      "options": [{
+        "property-declaration": false
+      }]
+    }
+  },
+  "rulesDirectory": []
+}

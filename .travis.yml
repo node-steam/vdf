@@ -1,0 +1,16 @@
+language: node_js
+
+cache:
+  yarn: false
+
+before_install:
+  - yarn global add typescript
+  - yarn global add ava
+  - yarn global add tslint
+  - yarn global add typedoc
+
+script: yarn test
+
+node_js:
+  - "7"
+  - "6"

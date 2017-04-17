@@ -1,0 +1,71 @@
+{
+  "name": "@node-steam/vdf",
+  "version": "1.0.0",
+  "description": "Module to convert Valve's KeyValue format to JSON and back",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "homepage": "https://github.com/node-steam/vdf",
+  "bugs": "https://github.com/node-steam/vdf/issues",
+  "repository": {
+    "url": "https://github.com/node-steam/vdf",
+    "type": "git"
+  },
+  "author": "N|Steam",
+  "keywords": [
+    "steam",
+    "valve",
+    "vdf",
+    "typescript",
+    "es6",
+    "es7"
+  ],
+  "files": [
+    "lib/*.js",
+    "lib/*.d.ts",
+    "example/*.js"
+  ],
+  "contributors": [
+    "Silas Rech <silas.rech@protonmail.com> (https://lenovouser.me)"
+  ],
+  "runkitExampleFilename": "example/runkit.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "compile": "tsc -p .",
+    "test": "yarn compile && ava",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "docs": "typedoc src/index.ts",
+    "prepublish": "yarn lint && yarn test && yarn docs"
+  },
+  "ava": {
+    "files": [
+      "test/*.js"
+    ],
+    "source": [
+      "lib/*.js"
+    ],
+    "concurrency": 5,
+    "verbose": true,
+    "failFast": true,
+    "failWithoutAssertions": false,
+    "powerAssert": false,
+    "require": [
+      "babel-register",
+      "babel-polyfill"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.12",
+    "app-module-path": "^2.2.0",
+    "ava": "^0.19.1",
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-register": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.7.1",
+    "typescript": "^2.2.2",
+    "typescript-eslint-parser": "^2.1.0"
+  }
+}
