@@ -3,7 +3,7 @@
 [![Dependencies](https://img.shields.io/david/node-steam/vdf.svg?style=flat-square)](https://david-dm.org/node-steam/vdf)
 [![Version](https://img.shields.io/npm/v/@node-steam/vdf.svg?style=flat-square)](https://www.npmjs.com/package/@node-steam/vdf)
 [![Downloads](https://img.shields.io/npm/dt/@node-steam/vdf.svg?style=flat-square)](https://www.npmjs.com/package/@node-steam/vdf)
-[![License](https://img.shields.io/npm/l/@node-steam/vdf.svg?style=flat-square)](https://www.npmjs.com/package/@node-steam/vdf)
+[![License](https://img.shields.io/github/license/node-steam/vdf.svg?style=flat-square)](https://www.npmjs.com/package/@node-steam/vdf)
 [![Runkit](https://img.shields.io/badge/try%20on%20runkit-vdf-blue.svg?style=flat-square)](https://runkit.com/npm/@node-steam/vdf)
 
 [![npm statistics](https://nodei.co/npm/@node-steam/vdf.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@node-steam/vdf)
