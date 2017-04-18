@@ -8,7 +8,7 @@
 
 [![npm statistics](https://nodei.co/npm/@node-steam/vdf.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/@node-steam/vdf)
 
-**VDF** is a module to convert Valve's KeyValue format to JSON and back using Typescript.
+**VDF** is a module to convert [Valve's KeyValue format](https://developer.valvesoftware.com/wiki/KeyValues) to JSON and back using Typescript.
 
 ## Installation
 
