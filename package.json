@@ -57,15 +57,15 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^7.0.12",
+    "@types/node": "^8.0.53",
     "app-module-path": "^2.2.0",
-    "ava": "^0.19.1",
-    "babel-core": "^6.24.1",
-    "babel-polyfill": "^6.23.0",
-    "babel-register": "^6.24.1",
-    "eslint": "^3.19.0",
-    "eslint-config-google": "^0.7.1",
-    "typescript": "^2.2.2",
-    "typescript-eslint-parser": "^2.1.0"
+    "ava": "^0.24.0",
+    "babel-core": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.12.0",
+    "eslint-config-google": "^0.9.1",
+    "typescript": "^2.6.1",
+    "typescript-eslint-parser": "^9.0.0"
   }
 }

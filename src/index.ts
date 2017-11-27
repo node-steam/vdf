@@ -4,7 +4,7 @@
  * @param  {string} text VDF string to parse
  * @return {object} JSON object
  */
-export const parse = (text: string): object => {
+export const parse = (text: string): any => {
 
     if (typeof text !== 'string') {
         throw new TypeError('VDF | Parse: Expecting parameter to be a string');
@@ -87,7 +87,7 @@ export const stringify = (object: object): string => {
  */
 const dump = (object: any, level: number): string => {
     if (typeof object !== 'object') {
-        throw new TypeError('VDF | Stringify: a key has value of type other than string or object');
+        throw new TypeError('VDF | Stringify: A key has value of type other than string or object');
     }
 
     const x    = '\t';
