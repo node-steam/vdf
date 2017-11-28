@@ -10,28 +10,20 @@ import {
 const string =
 `"description"		"This is a example object!"
 "boolean"		"true"
-"number"		"529"
 `;
 
-test('Parse', (t) => {
-    const should = {
-        description: 'This is a example object!',
-        boolean: 'true',
-        number: '529',
-    };
+const object = {
+    description: 'This is a example object!',
+    boolean: true,
+};
 
+test('Parse', (t) => {
     const result = parse(string);
 
-    t.deepEqual(result, should);
+    t.deepEqual(result, object);
 });
 
 test('Stringify', (t) => {
-    const object = {
-        description: 'This is a example object!',
-        boolean: true,
-        number: 529,
-    };
-
     const result = stringify(object);
 
     t.deepEqual(result, string);

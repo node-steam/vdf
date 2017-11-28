@@ -10,6 +10,10 @@
 
 **VDF** is a module to convert [Valve's KeyValue format](https://developer.valvesoftware.com/wiki/KeyValues) to JSON and back using Typescript.
 
+> Heavily inspired by [simple-vdf](https://github.com/rossengeorgiev/vdf-parser)
+>
+> (`<= v2.0.0` can be used as a drop-in replacement)
+
 ## Installation
 
 You can install **VDF** through the command line by using the following command:
@@ -40,9 +44,21 @@ import {
 
 ```javascript
 const string = `
-"description"   "This is a example VDF object!"
-"boolean"       "true"
-"number"        "529"
+"string"          "string"
+"false"           "false"
+"true"            "true"
+"number"          "1234"
+"float"           "12.34"
+"null"            "null"
+"undefined"       "undefined"
+"nested"
+{
+    "string"      "string"
+    "deep"
+    {
+        "string"  "string"
+    }
+}
 `;
 
 const object = VDF.parse(string);
@@ -52,9 +68,19 @@ const object = VDF.parse(string);
 const object = parse(string);
 
 > {
-    description: 'This is a example VDF object!',
-    boolean: 'true',
-    number: '529',
+    string:     'string',
+    false:      false,
+    true:       true,
+    number:     1234,
+    float:      12.34,
+    null:       null,
+    undefined:  undefined,
+    nested: {
+        string: 'string',
+        deep: {
+            string: 'string',
+        },
+    },
 };
 ```
 
@@ -63,9 +89,19 @@ const object = parse(string);
 
 ```javascript
 const object = {
-    description: 'This is a example VDF object!',
-    boolean: true,
-    number: 529,
+    string:     'string',
+    false:      false,
+    true:       true,
+    number:     1234,
+    float:      12.34,
+    null:       null,
+    undefined:  undefined,
+    nested: {
+        string: 'string',
+        deep: {
+            string: 'string',
+        },
+    },
 };
 
 const string = VDF.stringify(object);
@@ -75,11 +111,30 @@ const string = VDF.stringify(object);
 const string = stringify(object);
 
 > `
-"description"   "This is a example VDF object!"
-"boolean"       "true"
-"number"        "529"
+"string"          "string"
+"false"           "false"
+"true"            "true"
+"number"          "1234"
+"float"           "12.34"
+"null"            "null"
+"undefined"       "undefined"
+"nested"
+{
+    "string"      "string"
+    "deep"
+    {
+        "string"  "string"
+    }
+}
 `;
 ```
+
+## Differences from [simple-vdf](https://github.com/rossengeorgiev/vdf-parser)
+
+ - Correct parsing of [`booleans`](https://developer.mozilla.org/en-US/docs/Glossary/Boolean), [`numbers`](https://developer.mozilla.org/en-US/docs/Glossary/Number), [`null`](https://developer.mozilla.org/en-US/docs/Glossary/Null) and [`undefined`](https://developer.mozilla.org/en-US/docs/Glossary/Undefined) (`>= v2.0.0`)
+ - ES6 // Typescript syntax
+ - Typescript definitions
+ - Modern ES6 tests
 
 ## Contributors
 
