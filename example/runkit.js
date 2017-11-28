@@ -1,11 +1,20 @@
 const vdf = require('@node-steam/vdf');
 
-const object = {
-    description: 'This is a example object!',
-    boolean: true,
-    number: 529,
-};
+const string =
+`"string"          "string"
+"false"           "false"
+"true"            "true"
+"number"          "1234"
+"float"           "12.34"
+"null"            "null"
+"undefined"       "undefined"
+"nested"
+{
+    "string"      "string"
+    "deep"
+    {
+        "string"  "string"
+    }
+}`;
 
-const x = vdf.stringify(object, true);
-
-return x;
+vdf.parse(string);

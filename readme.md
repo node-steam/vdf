@@ -12,7 +12,9 @@
 
 > Heavily inspired by [simple-vdf](https://github.com/rossengeorgiev/vdf-parser)
 >
-> (`<= v2.0.0` can be used as a drop-in replacement)
+> (`< v2.0.0` can be used as a drop-in replacement)
+>
+> [Differences](#differences-from-simple-vdf)
 
 ## Installation
 

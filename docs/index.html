@@ -73,10 +73,6 @@
 				<a href="https://runkit.com/npm/@node-steam/vdf"><img src="https://img.shields.io/badge/try%20on%20runkit-vdf-blue.svg?style=flat-square" alt="Runkit"></a></p>
 				<p><a href="https://www.npmjs.com/package/@node-steam/vdf"><img src="https://nodei.co/npm/@node-steam/vdf.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="npm statistics"></a></p>
 				<p><strong>VDF</strong> is a module to convert <a href="https://developer.valvesoftware.com/wiki/KeyValues">Valve&#39;s KeyValue format</a> to JSON and back using Typescript.</p>
-				<blockquote>
-					<p>Heavily inspired by <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></p>
-					<p>(<code>&lt;= v2.0.0</code> can be used as a drop-in replacement)</p>
-				</blockquote>
 				<h2 id="installation">Installation</h2>
 				<p>You can install <strong>VDF</strong> through the command line by using the following command:</p>
 				<pre><code>yarn add @<span class="hljs-keyword">node</span><span class="hljs-title">-steam</span>/vdf
@@ -182,6 +178,10 @@
 }
 `</span>;
 </code></pre>
+				<blockquote>
+					<p>Heavily inspired by <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></p>
+					<p>(<code>&lt; v2.0.0</code> can be used as a drop-in replacement)</p>
+				</blockquote>
 				<h2 id="differences-from-simple-vdf-https-github-com-rossengeorgiev-vdf-parser-">Differences from <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></h2>
 				<ul>
 					<li>Correct parsing of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Boolean"><code>booleans</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/Number"><code>numbers</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/Null"><code>null</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Undefined"><code>undefined</code></a> (<code>&gt;= v2.0.0</code>)</li>

@@ -1,8 +1,8 @@
 /**
  * Parse a VDF string into a JSON object
  *
- * @param  {string} text VDF string to parse
- * @return {object} JSON object
+ * @param  { string } text VDF string to parse
+ * @return { object } JSON object
  */
 export const parse = (text: string): any => {
 
@@ -78,21 +78,21 @@ export const parse = (text: string): any => {
 /**
  * Parse a JSON object into a VDF string
  *
- * @param  {object}  text   JSON object to parse
- * @return {string}  VDF string
+ * @param  { object } text JSON object to parse
+ * @return { string } VDF string
  */
 export const stringify = (object: any): string => {
     if (typeof object !== 'object') {
         throw new TypeError('VDF | Stringify: First input parameter is not an object');
     }
 
-    return dump(object, 0);
+    return create(object);
 };
 
 /**
  * @hidden
  */
-const dump = (object: any, level: number): string => {
+const create = (object: any, level = 0): string => {
     if (typeof object !== 'object') {
         throw new TypeError('VDF | Stringify: A key has value of type other than string or object');
     }
@@ -107,7 +107,7 @@ const dump = (object: any, level: number): string => {
 
     for (const key in object) {
         if (typeof object[key] === 'object' && object[key] !== null) {
-            result += [indent, '"', key, '"\n', indent, '{\n', dump(object[key], level + 1), indent, '}\n'].join('');
+            result += [indent, '"', key, '"\n', indent, '{\n', create(object[key], level + 1), indent, '}\n'].join('');
         } else {
             result += [indent, '"', key, '"', x, x, '"', String(object[key]), '"\n'].join('');
         }
