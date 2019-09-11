@@ -71,35 +71,42 @@
 					<a href="https://www.npmjs.com/package/@node-steam/vdf"><img src="https://img.shields.io/npm/dt/@node-steam/vdf.svg?style=flat-square" alt="Downloads"></a>
 					<a href="https://www.npmjs.com/package/@node-steam/vdf"><img src="https://img.shields.io/github/license/node-steam/vdf.svg?style=flat-square" alt="License"></a>
 				<a href="https://runkit.com/npm/@node-steam/vdf"><img src="https://img.shields.io/badge/try%20on%20runkit-vdf-blue.svg?style=flat-square" alt="Runkit"></a></p>
-				<p><a href="https://www.npmjs.com/package/@node-steam/vdf"><img src="https://nodei.co/npm/@node-steam/vdf.png?downloads=true&amp;downloadRank=true&amp;stars=true" alt="npm statistics"></a></p>
+				<p><a href="https://www.npmjs.com/package/@node-steam/vdf"><img src="https://nodei.co/npm/@node-steam/vdf.png?downloads=true&downloadRank=true&stars=true" alt="npm statistics"></a></p>
 				<p><strong>VDF</strong> is a module to convert <a href="https://developer.valvesoftware.com/wiki/KeyValues">Valve&#39;s KeyValue format</a> to JSON and back using Typescript.</p>
 				<blockquote>
 					<p>Heavily inspired by <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></p>
 					<p>(<code>&lt; v2.0.0</code> can be used as a drop-in replacement)</p>
 					<p><a href="#differences-from-simple-vdf">Differences</a></p>
 				</blockquote>
-				<h2 id="installation">Installation</h2>
+				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
+					<h2>Installation</h2>
+				</a>
 				<p>You can install <strong>VDF</strong> through the command line by using the following command:</p>
-				<pre><code>yarn add @<span class="hljs-keyword">node</span><span class="hljs-title">-steam</span>/vdf
-</code></pre><h2 id="usage-">Usage:</h2>
-				<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> VDF <span class="hljs-keyword">from</span> <span class="hljs-string">'@node-steam/vdf'</span>;
+				<pre><code>yarn add @<span class="hljs-keyword">node</span><span class="hljs-title">-steam</span>/vdf</code></pre>
+				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
+					<h2>Usage:</h2>
+				</a>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> * <span class="hljs-keyword">as</span> VDF <span class="hljs-keyword">from</span> <span class="hljs-string">'@node-steam/vdf'</span>;
 
 <span class="hljs-comment">// or</span>
 
 <span class="hljs-keyword">import</span> {
     parse,
     stringify,
-} <span class="hljs-keyword">from</span> <span class="hljs-string">'@node-steam/vdf'</span>;
-</code></pre>
-				<h2 id="documentation-">Documentation:</h2>
+} <span class="hljs-keyword">from</span> <span class="hljs-string">'@node-steam/vdf'</span>;</code></pre>
+				<a href="#documentation" id="documentation" style="color: inherit; text-decoration: none;">
+					<h2>Documentation:</h2>
+				</a>
 				<blockquote>
 					<p><strong><a href="https://node-steam.github.io/vdf/">Generated Documentation</a></strong></p>
 				</blockquote>
-				<h4 id="-vdf-parse-text-string-"><code>VDF.parse(text: string)</code></h4>
+				<a href="#codevdfparsetext-stringcode" id="codevdfparsetext-stringcode" style="color: inherit; text-decoration: none;">
+					<h4><code>VDF.parse(text: string)</code></h4>
+				</a>
 				<blockquote>
 					<p>Parse a VDF string into a JSON object</p>
 				</blockquote>
-				<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> string = <span class="hljs-string">`
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> string = <span class="hljs-string">`
 "string"          "string"
 "false"           "false"
 "true"            "true"
@@ -137,13 +144,14 @@
             <span class="hljs-attr">string</span>: <span class="hljs-string">'string'</span>,
         },
     },
-};
-</code></pre>
-				<h4 id="-vdf-stringify-object-object-"><code>VDF.stringify(object: object)</code></h4>
+};</code></pre>
+				<a href="#codevdfstringifyobject-objectcode" id="codevdfstringifyobject-objectcode" style="color: inherit; text-decoration: none;">
+					<h4><code>VDF.stringify(object: object)</code></h4>
+				</a>
 				<blockquote>
 					<p>Parse a JSON object into a VDF string</p>
 				</blockquote>
-				<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = {
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = {
     <span class="hljs-attr">string</span>:     <span class="hljs-string">'string'</span>,
     <span class="hljs-attr">false</span>:      <span class="hljs-literal">false</span>,
     <span class="hljs-attr">true</span>:       <span class="hljs-literal">true</span>,
@@ -181,33 +189,41 @@
         "string"  "string"
     }
 }
-`</span>;
-</code></pre>
-				<h2 id="differences-from-simple-vdf-https-github-com-rossengeorgiev-vdf-parser-">Differences from <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></h2>
+`</span>;</code></pre>
+				<a href="#differences-from-a-hrefhttpsgithubcomrossengeorgievvdf-parsersimple-vdfa" id="differences-from-a-hrefhttpsgithubcomrossengeorgievvdf-parsersimple-vdfa" style="color: inherit; text-decoration: none;">
+					<h2>Differences from <a href="https://github.com/rossengeorgiev/vdf-parser">simple-vdf</a></h2>
+				</a>
 				<ul>
 					<li>Correct parsing of <a href="https://developer.mozilla.org/en-US/docs/Glossary/Boolean"><code>booleans</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/Number"><code>numbers</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Glossary/Null"><code>null</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Glossary/Undefined"><code>undefined</code></a> (<code>&gt;= v2.0.0</code>)</li>
 					<li>ES6 // Typescript syntax</li>
 					<li>Typescript definitions</li>
 					<li>Modern ES6 tests</li>
 				</ul>
-				<h2 id="contributors">Contributors</h2>
+				<a href="#contributors" id="contributors" style="color: inherit; text-decoration: none;">
+					<h2>Contributors</h2>
+				</a>
 				<ul>
 					<li>Silas Rech aka. <strong><a href="mailto:silas.rech@protonmail.com">lenovouser</a></strong></li>
 				</ul>
-				<h2 id="contributing-">Contributing:</h2>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing:</h2>
+				</a>
 				<p>Interested in contributing to <strong>VDF</strong>? Contributions are welcome, and are accepted via pull requests. Please <a href="contributing.md">review these guidelines</a> before submitting any pull requests.</p>
-				<h3 id="help-">Help:</h3>
+				<a href="#help" id="help" style="color: inherit; text-decoration: none;">
+					<h3>Help:</h3>
+				</a>
 				<p><strong>Installing dependencies:</strong></p>
-				<pre><code><span class="hljs-attribute">yarn</span>
-</code></pre><p><strong>Compile:</strong></p>
-				<pre><code><span class="hljs-attribute">yarn compile</span>
-</code></pre><p><strong>Test:</strong></p>
-				<pre><code>yarn <span class="hljs-built_in">test</span>
-</code></pre><p><strong>Generate Docs:</strong></p>
-				<pre><code><span class="hljs-attribute">yarn docs</span>
-</code></pre><h2 id="tests-">Tests:</h2>
+				<pre><code><span class="hljs-attribute">yarn</span></code></pre><p><strong>Compile:</strong></p>
+				<pre><code><span class="hljs-attribute">yarn compile</span></code></pre><p><strong>Test:</strong></p>
+				<pre><code>yarn <span class="hljs-built_in">test</span></code></pre><p><strong>Generate Docs:</strong></p>
+				<pre><code><span class="hljs-attribute">yarn docs</span></code></pre>
+				<a href="#tests" id="tests" style="color: inherit; text-decoration: none;">
+					<h2>Tests:</h2>
+				</a>
 				<p>This module is thoroughly tested with <strong><a href="https://github.com/avajs/ava">ava</a></strong></p>
-				<h2 id="license-">License:</h2>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License:</h2>
+				</a>
 				<p>Code licensed under <a href="license.md">MIT</a>, documentation under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
 			</div>
 		</div>
@@ -244,6 +260,7 @@
 				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
 				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
 				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
@@ -292,7 +309,7 @@
 	</div>
 </footer>
 <div class="container tsd-generator">
-	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
 </div>
 <div class="overlay"></div>
 <script src="assets/js/main.js"></script>
