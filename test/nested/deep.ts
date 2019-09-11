@@ -1,5 +1,3 @@
-import 'app-module-path/cwd';
-
 import test from 'ava';
 
 import {
@@ -13,6 +11,11 @@ const string =
 {
 	"boolean"		"true"
 	"number"		"529"
+	"deep"
+	{
+		"boolean"		"false"
+		"number"		"925"
+	}
 }
 `;
 
@@ -21,7 +24,11 @@ const object = {
     nested: {
         boolean: true,
         number: 529,
-    },
+        deep: {
+            boolean: false,
+            number: 925,
+        },
+    }
 };
 
 test('Parse', (t) => {

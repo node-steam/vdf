@@ -1,5 +1,3 @@
-import 'app-module-path/cwd';
-
 import test from 'ava';
 
 import {
@@ -9,10 +7,12 @@ import {
 
 const string =
 `"description"		"This is a example object!"
+"boolean"		"true"
 `;
 
 const object = {
     description: 'This is a example object!',
+    boolean: true,
 };
 
 test('Parse', (t) => {

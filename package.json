@@ -34,36 +34,35 @@
   "license": "MIT",
   "scripts": {
     "compile": "tsc -p .",
-    "test": "yarn compile && ava",
+    "test": "yarn compile && TS_NODE_PROJECT=test/tsconfig.json ava",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "docs": "typedoc src/index.ts",
     "prepublish": "yarn lint && yarn test && yarn docs"
   },
   "ava": {
     "files": [
-      "test/*.js",
-      "test/**/*.js"
+      "test/*.ts",
+      "test/**/*.ts"
     ],
-    "source": [
-      "lib/*.js"
-    ],
-    "concurrency": 5,
+    "concurrency": 10,
     "verbose": true,
     "failFast": true,
     "failWithoutAssertions": false,
     "powerAssert": false,
+    "compileEnhancements": false,
+    "extensions": [
+      "ts"
+    ],
     "require": [
-      "babel-register",
-      "babel-polyfill"
+      "ts-node/register",
+      "tsconfig-paths/register"
     ]
   },
   "devDependencies": {
-    "@types/node": "^8.0.53",
-    "app-module-path": "^2.2.0",
-    "ava": "^0.24.0",
-    "babel-core": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
-    "typescript": "^2.6.1"
+    "@types/node": "^12.7.5",
+    "ava": "^2.3.0",
+    "ts-node": "^8",
+    "tsconfig-paths": "^3",
+    "typescript": "^3"
   }
 }

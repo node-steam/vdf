@@ -1,5 +1,3 @@
-import 'app-module-path/cwd';
-
 import test from 'ava';
 
 import {
@@ -9,12 +7,19 @@ import {
 
 const string =
 `"description"		"This is a example object!"
-"undefined"		"undefined"
+"nested"
+{
+	"boolean"		"true"
+	"number"		"529"
+}
 `;
 
 const object = {
     description: 'This is a example object!',
-    undefined: undefined,
+    nested: {
+        boolean: true,
+        number: 529,
+    },
 };
 
 test('Parse', (t) => {

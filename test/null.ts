@@ -1,5 +1,3 @@
-import 'app-module-path/cwd';
-
 import test from 'ava';
 
 import {
@@ -9,12 +7,12 @@ import {
 
 const string =
 `"description"		"This is a example object!"
-"float"		"2307.1997"
+"null"		"null"
 `;
 
 const object = {
     description: 'This is a example object!',
-    float: 2307.1997,
+    null: null as null,
 };
 
 test('Parse', (t) => {
