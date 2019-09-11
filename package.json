@@ -7,7 +7,7 @@
   "homepage": "https://github.com/node-steam/vdf",
   "bugs": "https://github.com/node-steam/vdf/issues",
   "repository": {
-    "url": "https://github.com/node-steam/vdf",
+    "url": "https://github.com/node-steam/vdf.git",
     "type": "git"
   },
   "author": "N|Steam",
@@ -25,7 +25,11 @@
     "example/*.js"
   ],
   "contributors": [
-    "Silas Rech <silas.rech@protonmail.com> (https://lenovouser.me)"
+    {
+      "name": "Silas Rech",
+      "email": "silas.rech@protonmail.com",
+      "url": "https://lenovouser.me"
+    }
   ],
   "runkitExampleFilename": "example/runkit.js",
   "engines": {
