@@ -58,11 +58,11 @@ export const parse = (text: string): any => {
                     continue;
                 }
 
-                if (!isNaN(val))         val = +val;
-                if (val === 'true')      val = true;
-                if (val === 'false')     val = false;
-                if (val === 'null')      val = null;
-                if (val === 'undefined') val = undefined;
+                if (val !== '' && !isNaN(val)) val = +val;
+                if (val === 'true')            val = true;
+                if (val === 'false')           val = false;
+                if (val === 'null')            val = null;
+                if (val === 'undefined')       val = undefined;
 
                 stack[stack.length - 1][key] = val;
             }
