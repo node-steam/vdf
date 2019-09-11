@@ -1,6 +1,6 @@
 {
   "name": "@node-steam/vdf",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Module to convert Valve's KeyValue format to JSON and back",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
