@@ -26,8 +26,29 @@ export const parse = (text: string): any => {
     let i = 0;
     const j = lines.length;
 
+    let comment = false;
+
     for (; i < j; i++) {
         let line = lines[i].trim();
+
+        if (line.startsWith('/*') && line.endsWith('*/')) {
+            continue;
+        }
+
+        if (line.startsWith('/*')) {
+            comment = true;
+            continue;
+        }
+
+        if (line.endsWith('*/')) {
+            comment = false;
+            continue;
+        }
+
+        if (comment) {
+            continue;
+        }
+
         if (line === '' || line[0] === '/') { continue; }
         if (line[0] === '{') {
             expect = false;
