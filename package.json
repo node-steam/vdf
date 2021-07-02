@@ -53,7 +53,6 @@
     "failFast": true,
     "failWithoutAssertions": false,
     "powerAssert": false,
-    "compileEnhancements": false,
     "extensions": [
       "ts"
     ],
