@@ -63,10 +63,10 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^12",
-    "ava": "^2",
-    "ts-node": "^8",
+    "@types/node": "^15",
+    "ava": "^3",
+    "ts-node": "^10",
     "tsconfig-paths": "^3",
-    "typescript": "^3"
+    "typescript": "^4"
   }
 }
