@@ -17,7 +17,7 @@
     "pretty": true,
     "removeComments": true,
     "sourceMap": false,
-    "target": "es5",
+    "target": "es2016",
     "types": [
       "node"
     ]
