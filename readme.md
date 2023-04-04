@@ -144,7 +144,7 @@ const string = stringify(object);
 
 ## Contributing:
 
-Interested in contributing to **VDF**? Contributions are welcome, and are accepted via pull requests. Please [review these guidelines](contributing.md) before submitting any pull requests.
+Interested in contributing to **VDF**? Contributions are welcome, and are accepted via pull requests. Please [review these guidelines](https://github.com/node-steam/vdf/blob/b2487111b034f2f518eff14e96af2f06e6b54734/contributing.md) before submitting any pull requests.
 
 ### Help:
 
